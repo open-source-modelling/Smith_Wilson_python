@@ -20,4 +20,5 @@ def SWHeart(u, v, alpha):
    
     u_Mat = np.tile(u, [v.size, 1]).transpose()
     v_Mat = np.tile(v, [u.size, 1])
-    return 0.5 * (alpha * (u_Mat + v_Mat) + np.exp(-alpha * (u_Mat + v_Mat)) - alpha * np.absolute(u_Mat-v_Mat) - np.exp(-alpha * np.absolute(u_Mat-v_Mat))); # Heart of the Wilson function from paragraph 132
+    # Return the heart of the Wilson function from paragraph 132
+    return 0.5 * (alpha * (u_Mat + v_Mat) + np.exp(-alpha * (u_Mat + v_Mat)) - alpha * np.absolute(u_Mat-v_Mat) - np.exp(-alpha * np.absolute(u_Mat-v_Mat)))
